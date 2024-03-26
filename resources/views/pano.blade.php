@@ -11,12 +11,17 @@
     <script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js') }}"></script>
     <script src="{{ asset('js/panolens.min.js') }}"></script>
     @vite( 'resources/js/app.js' )
+    @vite( 'resources/css/app.css' )
 </head>
 <body>
-    <div style="position:fixed; padding:10px; z-index:9">
-        <img src="{{ asset('img/logo-trans.png') }}" style="max-width:100px; max-height: 120px;">
+    <div class="pano-container justify-center p-[40px]">
+
+        <div class="fixed py-[10px] px-[20px]">
+            <img class="max-w-[100px] max-h-[120px]" src="{{ asset('img/logo-trans.png') }}">
+        </div>
+
+        <div class="pano-image w-full h-[600px]"></div>;
+
     </div>
-    <div class="pano-image" style="width: 100%; height: 600px;"></div>;
-    
 </body>
 </html>
